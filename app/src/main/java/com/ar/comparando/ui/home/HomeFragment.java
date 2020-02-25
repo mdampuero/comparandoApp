@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AdapterView;
 import android.widget.SearchView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -72,7 +73,14 @@ public class HomeFragment extends Fragment {
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage((this.getResources().getString(R.string.loading)));
         progressDialog.setCancelable(false);
+        mListView.setFocusable(false);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView tv=view.findViewById(R.id.tvBarcode);
+                Toast.makeText(getActivity(), tv.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
         return root;
     }
 
