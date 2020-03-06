@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment {
                 return true;
             }
         });
+
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -73,15 +74,11 @@ public class HomeFragment extends Fragment {
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage((this.getResources().getString(R.string.loading)));
         progressDialog.setCancelable(false);
-        mListView.setFocusable(false);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView tv=view.findViewById(R.id.tvBarcode);
-                Toast.makeText(getActivity(), tv.getText(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        /* hardcode*/
+        searchProduct("coca");
         return root;
+
     }
 
     public void searchProduct(String query){
@@ -105,6 +102,7 @@ public class HomeFragment extends Fragment {
             }
             @Override
             public void onFailure(Call<ResponsesProducts> call, Throwable t) {
+                progressDialog.hide();
                 Toast.makeText(getActivity(), "Fallo"+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

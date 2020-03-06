@@ -30,15 +30,16 @@
         <TextView
             android:id="@+id/tvName"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:inputType="textMultiLine"
             android:text="tvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. e"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_below="@+id/tvName"
             android:gravity="center_vertical"
             android:text="$ 1500"
@@ -48,8 +49,9 @@
         <TextView
             android:id="@+id/tvBarcode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="445411888900098" />
+            android:layout_height="20dp"
+            android:text="445411888900098"
+            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

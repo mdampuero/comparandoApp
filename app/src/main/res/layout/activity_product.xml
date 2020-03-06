@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintGuide_end="16dp"/>
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_weight="66.6"
+        android:background="#FFFFFF"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+    <TextView
+        android:id="@+id/tvBarcode"
+        android:text="445411888900098"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/picture" />
+    <TextView
+        android:id="@+id/tvName"
+        android:inputType="textMultiLine"
+        android:text="tvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. e"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/tvBarcode" />
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:text="Coca Cola"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvLabelPriceMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Precio minimo"
+        app:layout_constraintEnd_toEndOf="@id/middle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/tvBrand" />
+    <TextView
+        android:id="@+id/tvLabelPriceMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Precio máximo"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintStart_toStartOf="@+id/middle"
+        app:layout_constraintTop_toBottomOf="@+id/tvBrand"
+        />
+
+    <TextView
+        android:id="@+id/tvPriceMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="$ 1000"
+        app:layout_constraintEnd_toEndOf="@id/middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelPriceMin" />
+
+    <TextView
+        android:id="@+id/tvPriceMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="$ 2000"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintStart_toStartOf="@+id/middle"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelPriceMax" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="tvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. etvNamLorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend ligula vitae nisi lobortis vulputate. e"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceMin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

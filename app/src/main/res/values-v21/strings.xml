@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="text_search" type="id" />
+    <string name="product">Producto</string>
 </resources>

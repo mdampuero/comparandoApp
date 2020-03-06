@@ -18,5 +18,6 @@
     <string name="search">Buscar</string>
     <string name="loading">Cargando...</string>
     <string name="search_title">Buscala</string>
+    <string name="product">Producto</string>
 
 </resources>

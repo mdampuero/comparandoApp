@@ -1,6 +1,7 @@
 package com.ar.comparando.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -9,10 +10,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.ar.comparando.ProductActivity;
 import com.ar.comparando.R;
 import com.ar.comparando.models.Product;
 import com.ar.comparando.services.DownloadImageTask;
@@ -44,14 +47,11 @@ public class ProductAdapter  extends ArrayAdapter<Product> {
         mResource = resource;
     }
 
-
-
-
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        ProductAdapter.ViewHolder holder;
+        final ProductAdapter.ViewHolder holder;
         Double priceRange= getItem(position).getPriceMin();
 
         if(convertView == null){
@@ -71,11 +71,16 @@ public class ProductAdapter  extends ArrayAdapter<Product> {
         holder.name.setText(getItem(position).getName());
         holder.barcode.setText(getItem(position).getBarcode());
         holder.price.setText("$ "+priceRange);
-        Picasso.with(getContext()).load("https://imagenes.preciosclaros.gob.ar/productos/"+getItem(position).getBarcode()+"." +
-                "jpg").into(holder.picture);
-//        new DownloadImageTask( holder.picture)
-//                .execute("http://java.sogeti.nl/JavaBlog/wp-content/uploads/2009/04/android_icon_256.png");
+        Picasso.with(getContext()).load("https://imagenes.preciosclaros.gob.ar/productos/"+getItem(position).getBarcode()+"." + "jpg").into(holder.picture);
+        convertView.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProductActivity.class);
+                intent.putExtra("barcode", getItem(position).getBarcode());
+                getContext().startActivity(intent);
+            }
+        });
         return convertView;
     }
 }
